@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #55557e;
+}
+
+header {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title-box {
+  width: 74px;
+  height: 60px;
+  background-color: #3d3e52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.title-box.active {
+  width: 96px;
+  height: 77px;
+  background-color: #252525;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.title-box:not(.active):hover {
+  background-color: #2d2e39;
+}
+
+.container {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.sub-menu {
+  height: 150px;
+  background: url("./img/food.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: #fff;
+}
+
+.bg-opacity {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #252525;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.sub-mune__title {
+  position: relative;
+}
+.sub-mune__title h1 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.sub-mune__title img {
+  width: 20px;
+  vertical-align: bottom;
+}
+.sub-mune__title span {
+  font-size: 14px;
+}
+
+.item {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+  color: #aaa;
+  font-weight: 500;
+  cursor: pointer;
+}
+.item-count {
+  transition: 0.15s;
+}
+
+.item:hover .item-count {
+  transform: scale(1.3);
+  color: #252525;
+}
